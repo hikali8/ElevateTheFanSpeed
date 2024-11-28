@@ -2,4 +2,4 @@ Derived from this repository: [EmbeddedController](https://github.com/Soberia/Em
 
 Hardware address from internet masters.
 
-That which will change the fan speed of Lenovo Air 14 plus or other Air series to 50%. Originally 20% only.
+That which will change the fan speed of Lenovo Air 14 plus or other Air series to 50%. 20% only Originally.
