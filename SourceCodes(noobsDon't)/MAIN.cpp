@@ -44,7 +44,7 @@ Cleanup:
     return fIsRunAsAdmin;
 }
 
-void ElevateNow()
+void ElevateUAC()
 {
     BOOL bAlreadyRunningAsAdministrator = FALSE;
     try
@@ -69,7 +69,7 @@ void ElevateNow()
                 DWORD dwError = GetLastError();
                 if (dwError == ERROR_CANCELLED)
                     //Annoys you to Elevate it LOL
-                    CreateThread(0, 0, (LPTHREAD_START_ROUTINE)ElevateNow, 0, 0, 0);
+                    CreateThread(0, 0, (LPTHREAD_START_ROUTINE)ElevateUAC, 0, 0, 0);
             }
         }
 
@@ -80,7 +80,7 @@ void ElevateNow()
 
 int main()
 {
-	ElevateNow();
+	ElevateUAC();
 	
 	EmbeddedController ec = EmbeddedController();
 	for(int i = 3; i--;){
